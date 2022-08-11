@@ -26,8 +26,9 @@ class HomeViewModel: ObservableObject {
             .map(\.data)
             .decode(type: Comic.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
               if case .failure(let err) = completion {
+                self?.title = "Network error"
                 print("Network error \(err)")
               }
             }, receiveValue: { [weak self] comic in
