@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		D193E17028A4466600EDC444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E16F28A4466600EDC444 /* AppDelegate.swift */; };
 		D193E17228A4466600EDC444 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E17128A4466600EDC444 /* SceneDelegate.swift */; };
-		D193E17428A4466600EDC444 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E17328A4466600EDC444 /* ContentView.swift */; };
 		D193E17628A4467000EDC444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D193E17528A4467000EDC444 /* Assets.xcassets */; };
 		D193E17928A4467000EDC444 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D193E17828A4467000EDC444 /* Preview Assets.xcassets */; };
 		D193E17C28A4467000EDC444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D193E17A28A4467000EDC444 /* LaunchScreen.storyboard */; };
 		D193E18728A4467100EDC444 /* ShowtimeLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E18628A4467100EDC444 /* ShowtimeLabTests.swift */; };
 		D193E19228A4467100EDC444 /* ShowtimeLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E19128A4467100EDC444 /* ShowtimeLabUITests.swift */; };
+		D193E1A328A446BD00EDC444 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1A228A446BD00EDC444 /* HomeViewController.swift */; };
+		D193E1AC28A4475100EDC444 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1AB28A4475100EDC444 /* HomeViewModel.swift */; };
+		D193E1B128A4475F00EDC444 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1B028A4475F00EDC444 /* HomeView.swift */; };
+		D193E1BA28A44DBE00EDC444 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1B928A44DBE00EDC444 /* Comic.swift */; };
+		D193E1CD28A464BA00EDC444 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1CC28A464BA00EDC444 /* Loader.swift */; };
+		D193E1D728A486D300EDC444 /* WebUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193E1D628A486D200EDC444 /* WebUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		D193E16C28A4466600EDC444 /* ShowtimeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowtimeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D193E16F28A4466600EDC444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D193E17128A4466600EDC444 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D193E17328A4466600EDC444 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D193E17528A4467000EDC444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D193E17828A4467000EDC444 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D193E17B28A4467000EDC444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		D193E18D28A4467100EDC444 /* ShowtimeLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowtimeLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D193E19128A4467100EDC444 /* ShowtimeLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowtimeLabUITests.swift; sourceTree = "<group>"; };
 		D193E19328A4467100EDC444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D193E1A228A446BD00EDC444 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D193E1AB28A4475100EDC444 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D193E1B028A4475F00EDC444 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D193E1B928A44DBE00EDC444 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		D193E1CC28A464BA00EDC444 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		D193E1D628A486D200EDC444 /* WebUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,11 @@
 		D193E16E28A4466600EDC444 /* ShowtimeLab */ = {
 			isa = PBXGroup;
 			children = (
+				D193E1C328A4618300EDC444 /* Utility */,
 				D193E16F28A4466600EDC444 /* AppDelegate.swift */,
 				D193E17128A4466600EDC444 /* SceneDelegate.swift */,
-				D193E17328A4466600EDC444 /* ContentView.swift */,
+				D193E1A728A446D400EDC444 /* Home */,
+				D193E1B828A44D5800EDC444 /* Model */,
 				D193E17528A4467000EDC444 /* Assets.xcassets */,
 				D193E17A28A4467000EDC444 /* LaunchScreen.storyboard */,
 				D193E17D28A4467000EDC444 /* Info.plist */,
@@ -134,6 +146,33 @@
 				D193E19328A4467100EDC444 /* Info.plist */,
 			);
 			path = ShowtimeLabUITests;
+			sourceTree = "<group>";
+		};
+		D193E1A728A446D400EDC444 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D193E1A228A446BD00EDC444 /* HomeViewController.swift */,
+				D193E1AB28A4475100EDC444 /* HomeViewModel.swift */,
+				D193E1B028A4475F00EDC444 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D193E1B828A44D5800EDC444 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D193E1B928A44DBE00EDC444 /* Comic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D193E1C328A4618300EDC444 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D193E1CC28A464BA00EDC444 /* Loader.swift */,
+				D193E1D628A486D200EDC444 /* WebUI.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D193E17028A4466600EDC444 /* AppDelegate.swift in Sources */,
+				D193E1BA28A44DBE00EDC444 /* Comic.swift in Sources */,
+				D193E1D728A486D300EDC444 /* WebUI.swift in Sources */,
 				D193E17228A4466600EDC444 /* SceneDelegate.swift in Sources */,
-				D193E17428A4466600EDC444 /* ContentView.swift in Sources */,
+				D193E1B128A4475F00EDC444 /* HomeView.swift in Sources */,
+				D193E1AC28A4475100EDC444 /* HomeViewModel.swift in Sources */,
+				D193E1CD28A464BA00EDC444 /* Loader.swift in Sources */,
+				D193E1A328A446BD00EDC444 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
