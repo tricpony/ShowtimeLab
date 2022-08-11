@@ -12,7 +12,6 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var imageUrl: String = ""
-    @Published var uiImage = UIImage()
     var subscribers = Set<AnyCancellable>()
 
     init() {
