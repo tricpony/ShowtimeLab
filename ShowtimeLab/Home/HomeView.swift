@@ -32,6 +32,7 @@ struct HomeView: View {
         }
         .sheet(isPresented: $presentSheet) {
             Text(viewModel.alternateMessage)
+                .padding([.leading, .trailing], 12)
                 .onTapGesture {
                     presentSheet = false
                 }
