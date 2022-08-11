@@ -8,21 +8,15 @@
 import SwiftUI
 import WebKit
 
-typealias WebLoadCompletion = (Bool) -> ()
 struct WebUI: UIViewRepresentable {
     let urlString: String
-    var action: WebLoadCompletion?
-    var observer: WebLoadingObserver
     private let webView = WKWebView()
 
-    init(urlString: String, action: @escaping WebLoadCompletion) {
+    init(urlString: String) {
         self.urlString = urlString
-        self.action = action
-        self.observer = WebLoadingObserver(action: action)
     }
 
     func makeUIView(context: Context) -> WKWebView  {
-        webView.navigationDelegate = observer
         return webView
     }
       
@@ -33,28 +27,10 @@ struct WebUI: UIViewRepresentable {
     }
 }
 
-class WebLoadingObserver: NSObject, WKNavigationDelegate {
-    var action: WebLoadCompletion
-
-    init(action: @escaping WebLoadCompletion) {
-        self.action = action
-    }
-    
-    // MARK: WKNavigationDelegate
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        action(true)
-    }
-
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        action(false)
-    }
-}
-
 #if DEBUG
 struct WebView_Previews: PreviewProvider {
     static var previews: some View {
-        WebUI(urlString: "https://www.apple.com", action: { _ in })
+        WebUI(urlString: "https://www.apple.com")
     }
 }
 #endif

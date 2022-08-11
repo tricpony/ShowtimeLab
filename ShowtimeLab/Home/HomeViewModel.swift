@@ -10,7 +10,6 @@ import UIKit
 import Combine
 
 class HomeViewModel: ObservableObject {
-    @Published var isLoading: Bool = true
     @Published var title: String = ""
     @Published var imageUrl: String = ""
     @Published var uiImage = UIImage()
@@ -34,12 +33,7 @@ class HomeViewModel: ObservableObject {
             }, receiveValue: { [weak self] comic in
                 self?.title = comic.title
                 self?.imageUrl = comic.imageUrl
-                self?.isLoading = false
             })
             .store(in: &subscribers)
-    }
-    
-    private func imageLoadCompleted(_ status: Bool) {
-        isLoading = status
     }
 }

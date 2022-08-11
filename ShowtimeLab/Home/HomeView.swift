@@ -12,10 +12,10 @@ struct HomeView: View {
 
     var body: some View {
         ZStack {
-            ProgressView("Loading...").opacity(viewModel.isLoading ? 1 : 0)
+            ProgressView("Loading...")
             VStack {
                 if !viewModel.imageUrl.isEmpty {
-                    WebUI(urlString: viewModel.imageUrl, action: { _ in viewModel.isLoading.toggle() })
+                    WebUI(urlString: viewModel.imageUrl)
                         .padding(.top)
                 }
                 Text(viewModel.title)
