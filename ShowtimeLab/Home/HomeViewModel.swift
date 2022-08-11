@@ -12,6 +12,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var imageUrl: String = ""
+    var alternateMessage = ""
     var subscribers = Set<AnyCancellable>()
 
     init() {
@@ -32,6 +33,7 @@ class HomeViewModel: ObservableObject {
             }, receiveValue: { [weak self] comic in
                 self?.title = comic.title
                 self?.imageUrl = comic.imageUrl
+                self?.alternateMessage = comic.alt
             })
             .store(in: &subscribers)
     }

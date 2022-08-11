@@ -9,17 +9,32 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @State var presentSheet: Bool = false
 
     var body: some View {
         ZStack {
             ProgressView("Loading...")
-            VStack {
-                if !viewModel.imageUrl.isEmpty {
-                    WebUI(urlString: viewModel.imageUrl)
+            GeometryReader { geo in
+                VStack {
+                    if !viewModel.imageUrl.isEmpty {
+                        WebUI(urlString: viewModel.imageUrl)
+                            .onTapGesture {
+                                presentSheet = true
+                            }
+                            .padding(.top)
+                            .frame(height: geo.size.height * 0.7)
+                    }
+                    Divider()
+                    Text(viewModel.title)
                         .padding(.top)
                 }
-                Text(viewModel.title)
             }
+        }
+        .sheet(isPresented: $presentSheet) {
+            Text(viewModel.alternateMessage)
+                .onTapGesture {
+                    presentSheet = false
+                }
         }
     }
 }
