@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
-    @State var presentSheet: Bool = false
 
     var body: some View {
         ZStack {
@@ -19,7 +18,7 @@ struct HomeView: View {
                     if !viewModel.imageUrl.isEmpty {
                         WebUI(urlString: viewModel.imageUrl)
                             .onTapGesture {
-                                presentSheet = true
+                                viewModel.presentSheet = true
                             }
                             .padding(.top)
                             .frame(height: geo.size.height * 0.7)
@@ -30,11 +29,11 @@ struct HomeView: View {
                 }
             }
         }
-        .sheet(isPresented: $presentSheet) {
+        .sheet(isPresented: $viewModel.presentSheet) {
             Text(viewModel.alternateMessage)
                 .padding([.leading, .trailing], 12)
                 .onTapGesture {
-                    presentSheet = false
+                    viewModel.presentSheet = false
                 }
         }
     }

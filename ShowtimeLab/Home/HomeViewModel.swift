@@ -12,6 +12,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var imageUrl: String = ""
+    @Published var presentSheet: Bool = false
     var alternateMessage = ""
     var subscribers = Set<AnyCancellable>()
 
